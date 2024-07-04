@@ -34,31 +34,37 @@
                     <div class="input-group">
                         <label for="fname">First Name</label>
                         <input type="text" name="fname" id="fname" required>
+                        <div class="error"></div>
                     </div>
                     <div class="input-group">
                         <label for="lname">Last Name</label>
                         <input type="text" name="lname" id="lname" required>
+                        <div class="error"></div>
                     </div>
                     <div class="input-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error"></div>
                     </div>
                     <div class="input-group">
                         <label for="phn-no">Phone Number</label>
                         <input type="tel" name="phn-no" id="phn-no" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <div class="error"></div>
                     </div>
                     <div class="input-group">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" required>
+                        <div class="error"></div>
                     </div>
                     <div class="input-group">
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" name="confirm-password" id="confirm-password" required>
+                        <div class="error"></div>
                     </div>
                 </form>
             </fieldset>
             <div class="submit">
-                <button type="submit" onclick="document.getElementById('signup').submit()">Create Account</button>
+                <button id="submit-btn" type="submit">Create Account</button>
                 <h6>Already have an account? <a href="#">Log in</a></h6>
             </div>
         </section>

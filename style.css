@@ -183,3 +183,9 @@
     color: #596D48;
     text-decoration: none;
 }
+
+.error{
+    color: red;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+}
