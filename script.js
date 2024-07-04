@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (phoneValue === '') {
             phoneError.textContent = '* This field is required';
             return false;
-        } else if (!phoneValue.match(/^\d{3}-\d{3}-\d{4}$/)) {
+        } else if (!phoneValue.match(/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/)) {
             phoneError.textContent = '* Please enter a valid number (XXX-XXX-XXXX)';
             return false;
         } else {
