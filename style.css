@@ -4,17 +4,18 @@
 }
 
 :root{
-    --main-bg-color: #f0f0f0;
+    --main-bg-color: #fceded;
     --main-text-color: #333;
-    --main-border-color: #ccc;
+    --main-border-color: #E5E7EB;
     --main-border-radius: 5px;
     --main-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     --main-transition: all 0.3s ease;
+    --default-font: "Poppins", sans-serif;
 }
 
 *{
     box-sizing: border-box;
-    font-family: "Poppins Thin", sans-serif;
+    font-family: var(--default-font);
     color: var(--main-text-color);
     margin: 0;
     padding: 0;
@@ -26,12 +27,13 @@
     justify-content: flex-start;
     overflow: hidden;
     height: 100vh;
+    background: var(--main-bg-color);
 }
 
 .container > .bg-container {
     position: relative;
     height: 100vh;
-    width: 30vw;
+    width: 60vw;
     overflow: hidden;
 }
 
@@ -50,6 +52,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .container > .bg-container > .fg-container > .fg-img{
@@ -73,11 +76,81 @@
     align-items: center;
 }
 
-.container > .bg-container > footer > h6,a{
+.container > .bg-container > footer > h6, 
+.container > .bg-container > footer > h6 > a{
     color: white;
+    font-family: "Poppins Thin", sans-serif;
 }
 
 .container > .content {
     flex-grow: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > .content > .quote,
+.container > .content > fieldset{
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+.container > .content > .quote > blockquote{
+    font-size: 1.4rem;
+}
+
+.container > .content > .quote > blockquote > *{
+    padding-top: 1rem;
+}
+
+.container > .content > fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #fdf2f2;
+    box-shadow: var(--main-box-shadow);
+    transition: var(--main-transition);
+}
+
+.container > .content > fieldset > legend{
+    position: relative;
+    top: 2.5rem;
+    left: -0.5rem;
+    padding: 0.5rem;
+}
+
+.container > .content > fieldset > form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > .content > fieldset > form > .input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.container > .content > fieldset > form > .input-group > label{
+    text-transform: uppercase;
+}
+
+.container > .content > fieldset > form > .input-group > input{
+    width: 100%;
+    border: solid 1px var(--main-border-color);
+    background-color: var(--main-bg-color);
+    border-radius: var(--main-border-radius);
+    padding: 0.4rem;
+}
+
+.container > .content > fieldset > .submit{
+    position: absolute;
 }

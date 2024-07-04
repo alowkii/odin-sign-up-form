@@ -24,20 +24,28 @@
         <section class="content">
             <section class="quote">
                 <blockquote>
-                    <p>“The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.”</p>
-                    <footer>Steve Jobs</footer>
+                    <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.</p>
+                    <footer>You <i>know</i> you want to.</footer>
                 </blockquote>
             </section>
             <fieldset>
                 <legend><h1>Let's do this!</h1></legend>
                 <form action="signup.php" method="POST">
                     <div class="input-group">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required>
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" required>
                     </div>
                     <div class="input-group">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phn-no">Phone Number</label>
+                        <input type="tel" name="phn-no" id="phn-no" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <div class="input-group">
                         <label for="password">Password</label>
@@ -47,8 +55,11 @@
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" name="confirm-password" id="confirm-password" required>
                     </div>
-                    <button type="submit">Sign Up</button>
                 </form>
+                <div class="input-group">
+                    <button type="submit">Sign Up</button>
+                    <h6>Already have an account? <a href="">Log in</a></h6>
+                </div>
             </fieldset>
         </section>
     </main>
