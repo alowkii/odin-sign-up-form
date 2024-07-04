@@ -11,6 +11,7 @@
     --main-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     --main-transition: all 0.3s ease;
     --default-font: "Poppins", sans-serif;
+    --content-padding: 4rem;
 }
 
 *{
@@ -25,7 +26,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    overflow: hidden;
     height: 100vh;
     background: var(--main-bg-color);
 }
@@ -87,13 +87,17 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.container > .content > .quote,
+.container > .content > .quote{
+    padding: 0rem var(--content-padding);
+    width: 100%;
+}
+
 .container > .content > fieldset{
-    padding: 2rem 4rem;
+    padding: 2rem var(--content-padding);
     width: 100%;
 }
 
@@ -151,6 +155,31 @@
     padding: 0.4rem;
 }
 
-.container > .content > fieldset > .submit{
-    position: absolute;
+.container > .content > .submit{
+    width: 100%;
+    padding: 1.5rem var(--content-padding);
+}
+
+.container > .content > .submit > button{
+    width: 14rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    background-color: #596D48;
+    color: white;
+    border-radius: var(--main-border-radius);
+    box-shadow: var(--main-box-shadow);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.container > .content > .submit > h6{
+    font-family: "Poppins Regular", sans-serif;
+    font-size: 0.9rem;
+    padding-top: 1.5rem;
+}
+
+.container > .content > .submit > h6 > a{
+    color: #596D48;
+    text-decoration: none;
 }

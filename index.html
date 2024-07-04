@@ -30,7 +30,7 @@
             </section>
             <fieldset>
                 <legend><h1>Let's do this!</h1></legend>
-                <form action="signup.php" method="POST">
+                <form id="signup" action="" method="POST">
                     <div class="input-group">
                         <label for="fname">First Name</label>
                         <input type="text" name="fname" id="fname" required>
@@ -56,11 +56,11 @@
                         <input type="password" name="confirm-password" id="confirm-password" required>
                     </div>
                 </form>
-                <div class="input-group">
-                    <button type="submit">Sign Up</button>
-                    <h6>Already have an account? <a href="">Log in</a></h6>
-                </div>
             </fieldset>
+            <div class="submit">
+                <button type="submit" onclick="document.getElementById('signup').submit()">Create Account</button>
+                <h6>Already have an account? <a href="#">Log in</a></h6>
+            </div>
         </section>
     </main>
 </body>
